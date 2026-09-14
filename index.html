@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Joahna Marie Pasamba - Virtual Assistant, Amazon KDP Marketing, Social Media Management, Lead Generation, Outreach, Content Writing, Graphic Design, and Video Editing." />
+  <title>Joahna Marie Pasamba | Virtual Assistant & Marketing Support</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ivory:#F7F3EE;
+      --charcoal:#252525;
+      --terracotta:#C9785A;
+      --terracotta-dark:#A95F46;
+      --beige:#E8DED5;
+      --white:#FFFFFF;
+      --muted:#6E6965;
+      --line:#DED4CC;
+      --shadow:0 18px 45px rgba(50, 42, 36, 0.10);
+      --radius:22px;
+      --radius-sm:14px;
+      --max:1180px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"DM Sans", sans-serif;
+      background:var(--ivory);
+      color:var(--charcoal);
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .profile-photo{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center top;
+    }
+
+    .portrait-card{
+      overflow:hidden;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    button, input, textarea{
+      font:inherit;
+    }
+
+    .container{
+      width:min(92%, var(--max));
+      margin:0 auto;
+    }
+
+    .section{
+      padding:96px 0;
+    }
+
+    .section-title{
+      max-width:760px;
+      margin-bottom:42px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.78rem;
+      font-weight:800;
+      color:var(--terracotta);
+      margin-bottom:12px;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:28px;
+      height:2px;
+      background:var(--terracotta);
+    }
+
+    h1,h2,h3{
+      line-height:1.1;
+    }
+
+    h1,h2{
+      font-family:"Playfair Display", serif;
+    }
+
+    h1{
+      font-size:clamp(3rem, 7vw, 6.2rem);
+      letter-spacing:-.04em;
+    }
+
+    h2{
+      font-size:clamp(2.2rem, 5vw, 4rem);
+      letter-spacing:-.03em;
+      margin-bottom:16px;
+    }
+
+    h3{
+      font-size:1.25rem;
+      margin-bottom:10px;
+    }
+
+    p{
+      color:var(--muted);
+    }
+
+    .lead{
+      font-size:1.15rem;
+      max-width:720px;
+    }
+
+    /* NAV */
+    .nav-wrap{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:1000;
+      padding:18px 0;
+      transition:.3s ease;
+    }
+
+    .nav-wrap.scrolled{
+      background:rgba(247,243,238,.92);
+      backdrop-filter:blur(16px);
+      box-shadow:0 6px 25px rgba(35,35,35,.06);
+      padding:10px 0;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:22px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+    }
+
+    .brand-mark{
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      background:var(--charcoal);
+      color:var(--white);
+      display:grid;
+      place-items:center;
+      font-family:"Playfair Display", serif;
+      font-size:1.15rem;
+      box-shadow:0 8px 25px rgba(0,0,0,.12);
+    }
+
+    .brand span:last-child{
+      font-size:.95rem;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      list-style:none;
+    }
+
+    .nav-links a{
+      font-size:.92rem;
+      font-weight:700;
+      color:#4a4643;
+      position:relative;
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      width:0;
+      height:2px;
+      background:var(--terracotta);
+      transition:.25s ease;
+    }
+
+    .nav-links a:hover::after{
+      width:100%;
+    }
+
+    .menu-btn{
+      display:none;
+      border:0;
+      background:var(--white);
+      width:45px;
+      height:45px;
+      border-radius:12px;
+      cursor:pointer;
+      box-shadow:0 8px 25px rgba(0,0,0,.08);
+      font-size:1.35rem;
+    }
+
+    /* BUTTONS */
+    .btn-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:30px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:800;
+      border:1px solid transparent;
+      transition:.25s ease;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:var(--charcoal);
+      color:var(--white);
+      box-shadow:0 12px 28px rgba(37,37,37,.18);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      background:#111;
+    }
+
+    .btn-accent{
+      background:var(--terracotta);
+      color:white;
+      box-shadow:0 12px 26px rgba(201,120,90,.25);
+    }
+
+    .btn-accent:hover{
+      background:var(--terracotta-dark);
+      transform:translateY(-2px);
+    }
+
+    .btn-outline{
+      border-color:var(--charcoal);
+      color:var(--charcoal);
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      background:var(--charcoal);
+      color:white;
+    }
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:140px 0 80px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before,
+    .hero::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      filter:blur(2px);
+      z-index:-1;
+    }
+
+    .hero::before{
+      width:500px;
+      height:500px;
+      background:rgba(201,120,90,.13);
+      top:-130px;
+      right:-90px;
+    }
+
+    .hero::after{
+      width:360px;
+      height:360px;
+      background:rgba(232,222,213,.75);
+      left:-160px;
+      bottom:-80px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      align-items:center;
+      gap:60px;
+    }
+
+    .hero-copy .intro{
+      color:var(--terracotta);
+      font-weight:800;
+      letter-spacing:.04em;
+      margin-bottom:16px;
+    }
+
+    .hero-copy h1 span{
+      color:var(--terracotta);
+    }
+
+    .hero-copy .lead{
+      margin-top:24px;
+      font-size:1.18rem;
+    }
+
+    .hero-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:28px;
+    }
+
+    .badge{
+      background:rgba(255,255,255,.7);
+      border:1px solid var(--line);
+      padding:9px 13px;
+      border-radius:999px;
+      font-size:.86rem;
+      font-weight:700;
+      color:#514c48;
+      backdrop-filter:blur(8px);
+    }
+
+    .portrait-shell{
+      position:relative;
+      max-width:430px;
+      margin-left:auto;
+    }
+
+    .portrait-card{
+      min-height:560px;
+      border-radius:180px 180px 28px 28px;
+      background:
+        linear-gradient(145deg, rgba(201,120,90,.25), rgba(255,255,255,.4)),
+        var(--beige);
+      border:1px solid rgba(255,255,255,.7);
+      box-shadow:var(--shadow);
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .portrait-placeholder{
+      width:84%;
+      height:88%;
+      display:grid;
+      place-items:center;
+      border-radius:150px 150px 18px 18px;
+      background:linear-gradient(180deg,#e7d8ce,#cabbb1);
+      color:#6b5e56;
+      text-align:center;
+      padding:30px;
+      font-weight:700;
+    }
+
+    .portrait-photo{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center top;
+      display:block;
+    }
+
+    .floating-card{
+      position:absolute;
+      background:rgba(255,255,255,.94);
+      border:1px solid rgba(255,255,255,.9);
+      border-radius:16px;
+      padding:14px 18px;
+      box-shadow:0 14px 35px rgba(35,35,35,.14);
+      font-size:.9rem;
+      font-weight:800;
+    }
+
+    .float-1{ left:-52px; bottom:100px; }
+    .float-2{ right:-28px; top:105px; }
+
+    /* CREDIBILITY */
+    .credibility{
+      margin-top:-28px;
+      position:relative;
+      z-index:5;
+    }
+
+    .cred-bar{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      background:var(--charcoal);
+      color:white;
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 18px 40px rgba(37,37,37,.18);
+    }
+
+    .cred-item{
+      padding:30px 24px;
+      text-align:center;
+      border-right:1px solid rgba(255,255,255,.12);
+    }
+
+    .cred-item:last-child{ border-right:0; }
+
+    .cred-item strong{
+      display:block;
+      font-size:1.18rem;
+      margin-bottom:6px;
+    }
+
+    .cred-item span{
+      font-size:.84rem;
+      color:#cfc9c4;
+    }
+
+    /* CARDS */
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .card{
+      background:var(--white);
+      border:1px solid #eee6df;
+      border-radius:var(--radius);
+      padding:28px;
+      transition:.3s ease;
+      box-shadow:0 12px 28px rgba(50,42,36,.05);
+    }
+
+    .card:hover{
+      transform:translateY(-7px);
+      box-shadow:var(--shadow);
+      border-color:#dfcfc3;
+    }
+
+    .card-icon{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:var(--beige);
+      color:var(--terracotta-dark);
+      font-size:1.35rem;
+      margin-bottom:22px;
+    }
+
+    .card ul{
+      margin-top:16px;
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    .card li{
+      margin:7px 0;
+    }
+
+    /* FEATURED */
+    .portfolio{
+      background:#efe7e1;
+    }
+
+    .portfolio-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+
+    .project{
+      background:var(--white);
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid #e3d9d1;
+      box-shadow:0 12px 35px rgba(50,42,36,.06);
+      transition:.28s ease;
+    }
+
+    .project:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--shadow);
+    }
+
+    .project-visual{
+      height:220px;
+      padding:26px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .project-visual::after{
+      content:"";
+      position:absolute;
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      background:rgba(255,255,255,.2);
+      right:-45px;
+      bottom:-65px;
+    }
+
+    .v1{ background:linear-gradient(135deg,#2c2c2c,#4e443e); color:white; }
+    .v2{ background:linear-gradient(135deg,#cf8b72,#a95f46); color:white; }
+    .v3{ background:linear-gradient(135deg,#d9cec5,#f6eee8); color:#3f3935; }
+    .v4{ background:linear-gradient(135deg,#4d5c54,#293730); color:white; }
+    .v5{ background:linear-gradient(135deg,#7e6d68,#c8ada1); color:white; }
+    .v6{ background:linear-gradient(135deg,#2a3945,#59707c); color:white; }
+
+    .project-tag{
+      align-self:flex-start;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.25);
+      font-size:.76rem;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      backdrop-filter:blur(8px);
+    }
+
+    .project-visual h3{
+      font-family:"Playfair Display", serif;
+      font-size:2rem;
+      max-width:80%;
+      margin:0;
+    }
+
+    .project-body{
+      padding:25px;
+    }
+
+    .project-meta{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin:16px 0 20px;
+    }
+
+    .chip{
+      padding:7px 10px;
+      border-radius:999px;
+      background:#f4eee9;
+      color:#6d5f57;
+      font-size:.76rem;
+      font-weight:700;
+    }
+
+    .project-link{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      color:var(--terracotta-dark);
+      font-weight:800;
+    }
+
+    /* CASE STUDIES */
+    .case-list{
+      display:grid;
+      gap:18px;
+    }
+
+    .case{
+      display:grid;
+      grid-template-columns:120px 1fr auto;
+      gap:28px;
+      align-items:center;
+      padding:26px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .case-num{
+      font-family:"Playfair Display", serif;
+      font-size:2.3rem;
+      color:var(--terracotta);
+    }
+
+    .case .btn{
+      padding:11px 16px;
+      font-size:.85rem;
+    }
+
+    /* EXPERIENCE */
+    .experience{
+      background:var(--charcoal);
+      color:white;
+    }
+
+    .experience p{
+      color:#cfc8c2;
+    }
+
+    .timeline{
+      margin-top:40px;
+      display:grid;
+      gap:18px;
+    }
+
+    .timeline-item{
+      display:grid;
+      grid-template-columns:170px 1fr;
+      gap:28px;
+      padding:24px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .timeline-year{
+      color:#efb59f;
+      font-weight:800;
+    }
+
+    /* ABOUT */
+    .about-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:55px;
+      align-items:center;
+    }
+
+    .about-visual{
+      min-height:430px;
+      background:
+        linear-gradient(rgba(201,120,90,.08),rgba(201,120,90,.08)),
+        var(--beige);
+      border-radius:28px;
+      padding:28px;
+      display:flex;
+      align-items:flex-end;
+      box-shadow:var(--shadow);
+    }
+
+    .about-note{
+      background:white;
+      padding:22px;
+      border-radius:18px;
+      box-shadow:0 10px 26px rgba(50,42,36,.08);
+    }
+
+    .tool-grid{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:26px;
+    }
+
+    .tool{
+      padding:11px 14px;
+      background:white;
+      border:1px solid var(--line);
+      border-radius:12px;
+      font-weight:700;
+      font-size:.86rem;
+    }
+
+
+    /* CLIENT REVIEWS */
+    .reviews{
+      background:#fffaf6;
+      border-top:1px solid var(--line);
+    }
+
+    .reviews-summary{
+      display:grid;
+      grid-template-columns:.7fr 1.3fr;
+      gap:28px;
+      align-items:stretch;
+      margin-bottom:30px;
+    }
+
+    .review-score{
+      background:var(--charcoal);
+      color:white;
+      border-radius:var(--radius);
+      padding:32px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      box-shadow:var(--shadow);
+    }
+
+    .review-score strong{
+      font-family:"Playfair Display", serif;
+      font-size:3.4rem;
+      line-height:1;
+      margin-bottom:10px;
+    }
+
+    .review-score .stars{
+      color:#ff7a1a;
+      letter-spacing:3px;
+      font-size:1.2rem;
+      margin-bottom:8px;
+    }
+
+    .review-score p{ color:#d6d0cb; }
+
+    .review-history{
+      background:white;
+      border:1px solid #eee3da;
+      border-radius:var(--radius);
+      padding:30px;
+      box-shadow:0 12px 28px rgba(50,42,36,.05);
+    }
+
+    .review-history h3{
+      font-family:"Playfair Display", serif;
+      font-size:1.7rem;
+      margin-bottom:12px;
+    }
+
+    .review-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+
+    .review-card{
+      background:white;
+      border:1px solid #eadfd7;
+      border-radius:20px;
+      padding:24px;
+      box-shadow:0 10px 24px rgba(50,42,36,.05);
+      transition:.28s ease;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+    }
+
+    .review-card:hover{
+      transform:translateY(-5px);
+      box-shadow:var(--shadow);
+      border-color:#d8c5b7;
+    }
+
+    .review-card.hidden-review{ display:none; }
+
+    .review-top{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      align-items:flex-start;
+      margin-bottom:14px;
+    }
+
+    .review-title{
+      font-size:1.08rem;
+      margin:0 0 7px;
+    }
+
+    .review-stars{
+      color:#ff6b00;
+      letter-spacing:1px;
+      font-size:.95rem;
+      white-space:nowrap;
+      font-weight:800;
+    }
+
+    .review-date{
+      font-size:.82rem;
+      color:#817873;
+      white-space:nowrap;
+    }
+
+    .review-quote{
+      color:#4f4945;
+      font-style:italic;
+      font-size:1rem;
+      margin:4px 0 16px;
+    }
+
+    .review-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:auto;
+      padding-top:10px;
+    }
+
+    .review-tags span{
+      background:#f1ebe6;
+      color:#625952;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:.75rem;
+      font-weight:700;
+    }
+
+    .review-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px 22px;
+      margin-top:16px;
+      padding-top:14px;
+      border-top:1px solid #eee5de;
+      font-size:.82rem;
+      color:#746c67;
+    }
+
+    .reviews-actions{
+      display:flex;
+      justify-content:center;
+      margin-top:28px;
+    }
+
+    #toggleReviews{ min-width:190px; }
+
+    /* BACK TO TOP BUTTON */
+    .back-to-top{
+      position:fixed;
+      right:24px;
+      bottom:24px;
+      width:52px;
+      height:52px;
+      border:none;
+      border-radius:50%;
+      background:var(--charcoal);
+      color:white;
+      font-size:1.35rem;
+      font-weight:800;
+      cursor:pointer;
+      display:grid;
+      place-items:center;
+      box-shadow:0 12px 30px rgba(37,37,37,.22);
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(12px);
+      transition:.25s ease;
+      z-index:1200;
+    }
+
+    .back-to-top.show{
+      opacity:1;
+      visibility:visible;
+      transform:none;
+    }
+
+    .back-to-top:hover{
+      background:var(--terracotta-dark);
+      transform:translateY(-3px);
+    }
+
+    @media (max-width: 520px){
+      .back-to-top{
+        right:16px;
+        bottom:16px;
+        width:48px;
+        height:48px;
+      }
+    }
+
+    /* CTA */
+    .cta{
+      background:linear-gradient(135deg,var(--terracotta),#a95f46);
+      color:white;
+      border-radius:30px;
+      padding:56px;
+      display:grid;
+      grid-template-columns:1.3fr .7fr;
+      gap:40px;
+      align-items:center;
+      box-shadow:0 22px 50px rgba(169,95,70,.24);
+    }
+
+    .cta p{
+      color:#f8e9e2;
+      max-width:700px;
+    }
+
+    .contact-list{
+      display:grid;
+      gap:12px;
+      justify-items:start;
+    }
+
+    .contact-list a{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+    }
+
+    footer{
+      padding:34px 0 46px;
+    }
+
+    .footer-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+      padding-top:28px;
+      border-top:1px solid var(--line);
+      color:#746d68;
+      font-size:.9rem;
+    }
+
+    .socials{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .socials a{
+      padding:8px 12px;
+      border-radius:999px;
+      background:white;
+      border:1px solid var(--line);
+      font-weight:700;
+    }
+
+    /* Reveal animation */
+    .reveal{
+      opacity:0;
+      transform:translateY(24px);
+      transition:.7s ease;
+    }
+
+    .reveal.show{
+      opacity:1;
+      transform:none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px){
+      .hero-grid,
+      .about-grid,
+      .cta{
+        grid-template-columns:1fr;
+      }
+
+      .portrait-shell{
+        margin:20px auto 0;
+      }
+
+      .grid-3{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .cred-bar{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .cred-item:nth-child(2){
+        border-right:0;
+      }
+
+      .cred-item:nth-child(-n+2){
+        border-bottom:1px solid rgba(255,255,255,.12);
+      }
+
+      .case{
+        grid-template-columns:90px 1fr;
+      }
+
+      .case .btn{
+        grid-column:2;
+        justify-self:start;
+      }
+
+      .reviews-summary{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 760px){
+      .section{
+        padding:76px 0;
+      }
+
+      .nav-links{
+        position:absolute;
+        top:70px;
+        left:4%;
+        right:4%;
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+        padding:20px;
+        background:rgba(247,243,238,.98);
+        border:1px solid var(--line);
+        border-radius:18px;
+        box-shadow:var(--shadow);
+      }
+
+      .nav-links.open{
+        display:flex;
+      }
+
+      .menu-btn{
+        display:block;
+      }
+
+      .hero{
+        padding-top:120px;
+      }
+
+      .hero-grid{
+        gap:36px;
+      }
+
+      .portrait-card{
+        min-height:430px;
+      }
+
+      .float-1{
+        left:-10px;
+        bottom:60px;
+      }
+
+      .float-2{
+        right:-8px;
+        top:78px;
+      }
+
+      .grid-3,
+      .portfolio-grid,
+      .review-grid{
+        grid-template-columns:1fr;
+      }
+
+      .timeline-item{
+        grid-template-columns:1fr;
+        gap:7px;
+      }
+
+      .cta{
+        padding:38px 28px;
+      }
+    }
+
+    @media (max-width: 520px){
+      h1{
+        font-size:clamp(2.65rem, 15vw, 4.3rem);
+      }
+
+      .cred-bar{
+        grid-template-columns:1fr;
+      }
+
+      .cred-item{
+        border-right:0;
+        border-bottom:1px solid rgba(255,255,255,.12);
+      }
+
+      .cred-item:last-child{
+        border-bottom:0;
+      }
+
+      .case{
+        grid-template-columns:1fr;
+      }
+
+      .case .btn{
+        grid-column:1;
+      }
+
+      .case-num{
+        font-size:1.5rem;
+      }
+
+      .portrait-card{
+        min-height:360px;
+      }
+
+      .floating-card{
+        font-size:.78rem;
+        padding:10px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav-wrap" id="navbar">
+    <div class="container">
+      <nav>
+        <a href="#home" class="brand" aria-label="Joahna Marie home">
+          <span class="brand-mark">JM</span>
+          <span>Joahna Marie</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="intro">VIRTUAL ASSISTANT • MARKETING SUPPORT • REMOTE WORK</p>
+          <h1>Hi, I’m <span>Joahna Marie.</span></h1>
+          <p class="lead">
+            The Support Behind Your Business, So You Can Focus on What Matters Most.<br></br>
+You have the vision. You have the goals. But you don’t have to do everything alone. I’m here to take care of the details, keep things moving, and give you the reliable support you need to focus on growing your business.
+
+          </p>
+
+          <div class="hero-badges">
+            <span class="badge">12+ Years Experience</span>
+            <span class="badge">Based in the Philippines 🇵🇭</span>
+            <span class="badge">Available for Remote Work</span>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#portfolio">View My Work ↓</a>
+            <a class="btn btn-accent" href="mailto:joahnamarie.jmp@gmail.com">Hire Me ✦</a>
+          </div>
+        </div>
+
+        <div class="portrait-shell reveal">
+          <div class="portrait-card">
+                <img
+      src="joahna-headshot.jpg"
+      alt="Joahna Marie professional headshot"
+      class="profile-photo">
+          </div>
+          <div class="floating-card float-1">12+ Years Freelance Experience</div>
+          <div class="floating-card float-2">VA • SMM • Lead Gen</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="credibility">
+      <div class="container">
+        <div class="cred-bar reveal">
+          <div class="cred-item">
+            <strong>Virtual Assistance</strong>
+            <span>Reliable day-to-day support</span>
+          </div>
+          <div class="cred-item">
+            <strong>Social Media</strong>
+            <span>Content, scheduling & growth</span>
+          </div>
+          <div class="cred-item">
+            <strong>Lead Generation</strong>
+            <span>Research, prospecting & outreach</span>
+          </div>
+          <div class="cred-item">
+            <strong>Amazon KDP</strong>
+            <span>Book marketing & promotion support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">What I Can Help With</span>
+          <h2>Practical support for busy entrepreneurs and growing businesses.</h2>
+          <p class="lead">
+            I combine organization, marketing, creativity, and hands-on execution so clients
+            can stay focused on growth while I help keep the work moving.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card reveal">
+            <div class="card-icon">📱</div>
+            <h3>Social Media Management</h3>
+            <p>Consistent, organized support for your social presence.</p>
+            <ul>
+              <li>Facebook & Instagram</li>
+              <li>Pinterest, X/Twitter, TikTok, YouTube</li>
+              <li>Content planning & captions</li>
+              <li>Scheduling, engagement & organic growth</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">🎯</div>
+            <h3>Lead Generation & Outreach</h3>
+            <p>Prospecting systems designed to support business development.</p>
+            <ul>
+              <li>Prospect research</li>
+              <li>Lead list building</li>
+              <li>Social media & DM outreach</li>
+              <li>Recruitment / candidate outreach</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">📚</div>
+            <h3>Amazon KDP & Book Marketing</h3>
+            <p>Niche support for authors, publishers, and book launches.</p>
+            <ul>
+              <li>Book promotion support</li>
+              <li>Goodreads / reviewer outreach</li>
+              <li>Launch campaign assistance</li>
+              <li>Social media promotion</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">✍️</div>
+            <h3>Content & Copywriting</h3>
+            <p>Clear content written with the audience and purpose in mind.</p>
+            <ul>
+              <li>Website content</li>
+              <li>Social media captions</li>
+              <li>Content calendars</li>
+              <li>Real estate & marketing content</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">🎨</div>
+            <h3>Creative Services</h3>
+            <p>Visual support for brands that need polished, practical assets.</p>
+            <ul>
+              <li>Canva graphics</li>
+              <li>Ebook cover designs</li>
+              <li>Social media graphics</li>
+              <li>Short-form video editing</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">💻</div>
+            <h3>Virtual Assistance</h3>
+            <p>Dependable behind-the-scenes support to keep operations organized.</p>
+            <ul>
+              <li>Online research</li>
+              <li>Admin assistance</li>
+              <li>Data organization</li>
+              <li>General online business support</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Featured Portfolio</span>
+          <h2>Selected work across marketing, content, design, and digital support.</h2>
+          <p class="lead">
+            These project categories give clients a quick overview of the kind of work I can support.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="project reveal">
+            <div class="project-visual v1">
+              <span class="project-tag">Content Writing</span>
+              <h3>Website Content Projects</h3>
+            </div>
+            <div class="project-body">
+              <p>
+                Website content work created to help businesses communicate their services clearly,
+                professionally, and in a client-friendly way.
+              </p>
+              <div class="project-meta">
+                <span class="chip">Website Content</span>
+                <span class="chip">Copywriting</span>
+                <span class="chip">Brand Messaging</span>
+              </div>
+              <div class="btn-row">
+                <a class="project-link" href="https://www.caandersonenterprisellc.com/" target="_blank" rel="noopener">View CA Anderson ↗</a>
+                <a class="project-link" href="https://max-score.com" target="_blank" rel="noopener">View Max Score ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual v2">
+              <span class="project-tag">Social Media</span>
+              <h3>Accounts Managed from Scratch</h3>
+            </div>
+            <div class="project-body">
+              <p>
+                Social media management support including account setup, content, engagement,
+                outreach, and ongoing account growth.
+              </p>
+              <div class="project-meta">
+                <span class="chip">SMM</span>
+                <span class="chip">Content</span>
+                <span class="chip">Engagement</span>
+              </div>
+              <a class="project-link" href="https://docs.google.com/spreadsheets/d/1gxjOZctE42MVSmbn0MFP-9bZdeRb-OMehoCTktpPE_E/edit?usp=sharing" target="_blank" rel="noopener">View Managed Accounts ↗</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual v3">
+              <span class="project-tag">Content Planning</span>
+              <h3>Real Estate Content Planner</h3>
+            </div>
+            <div class="project-body">
+              <p>
+                A structured real estate content plan created to support consistent publishing,
+                educational content, promotional content, and audience engagement.
+              </p>
+              <div class="project-meta">
+                <span class="chip">Research</span>
+                <span class="chip">Planning</span>
+                <span class="chip">Writing</span>
+              </div>
+              <a class="project-link" href="https://docs.google.com/document/d/1eAMgzUkrRrFMYYZu64eUYBSCoBUycH_4UGjN7PDNvxg/edit?usp=sharing" target="_blank" rel="noopener">View Sample ↗</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual v4">
+              <span class="project-tag">Graphic Design</span>
+              <h3>Brand & Social Graphics</h3>
+            </div>
+            <div class="project-body">
+              <p>
+                Creative design work for online brands, marketing materials, and social media content.
+              </p>
+              <div class="project-meta">
+                <span class="chip">Canva</span>
+                <span class="chip">Social Graphics</span>
+                <span class="chip">Marketing Assets</span>
+              </div>
+              <a class="project-link" href="https://www.dropbox.com/sh/0mel9wrkatg5wlm/AABzhU8eP9fIsFyNpPX47cYfa?dl=0" target="_blank" rel="noopener">View Design Collection ↗</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual v5">
+              <span class="project-tag">Book Design</span>
+              <h3>Ebook Cover Designs</h3>
+            </div>
+            <div class="project-body">
+              <p>
+                Cover design samples for digital publishing and Amazon KDP-related projects.
+              </p>
+              <div class="project-meta">
+                <span class="chip">Ebook Covers</span>
+                <span class="chip">KDP</span>
+                <span class="chip">Design</span>
+              </div>
+              <a class="project-link" href="https://drive.google.com/drive/folders/1r3VAxY1yXblov2_GgUHhZxQTFqRJu12p" target="_blank" rel="noopener">View Covers ↗</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual v6">
+              <span class="project-tag">Video Editing</span>
+              <h3>Short-Form Video Projects</h3>
+            </div>
+            <div class="project-body">
+              <p>
+                Video editing samples created for digital campaigns, social media, and online content.
+              </p>
+              <div class="project-meta">
+                <span class="chip">Reels</span>
+                <span class="chip">Short-form Video</span>
+                <span class="chip">Editing</span>
+              </div>
+              <a class="project-link" href="https://drive.google.com/drive/u/0/folders/16uFrtEkEWrGWfZeVOn3thbrFk_c3dULO" target="_blank" rel="noopener">View Videos ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="case-studies">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">How I Work</span>
+          <h2>Professional support is more than “doing tasks.”</h2>
+          <p class="lead">
+            My approach is built around understanding the goal, organizing the work,
+            communicating clearly, and helping move projects toward a useful outcome.
+          </p>
+        </div>
+
+        <div class="case-list">
+          <div class="case reveal">
+            <div class="case-num">01</div>
+            <div>
+              <h3>Social Media Account Management</h3>
+              <p><strong>Approach:</strong> setup → content planning → captions → graphics → scheduling → engagement → outreach.</p>
+            </div>
+            <a href="#contact" class="btn btn-outline">Discuss a Project</a>
+          </div>
+
+          <div class="case reveal">
+            <div class="case-num">02</div>
+            <div>
+              <h3>Amazon KDP / Book Marketing Support</h3>
+              <p><strong>Approach:</strong> promotion strategy → social content → reviewer outreach → launch support → follow-up.</p>
+            </div>
+            <a href="#contact" class="btn btn-outline">Discuss a Project</a>
+          </div>
+
+          <div class="case reveal">
+            <div class="case-num">03</div>
+            <div>
+              <h3>Lead Generation & Outreach</h3>
+              <p><strong>Approach:</strong> target definition → research → list building → outreach → follow-up → organized tracking.</p>
+            </div>
+            <a href="#contact" class="btn btn-outline">Discuss a Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Experience</span>
+          <h2>12+ years supporting clients remotely.</h2>
+          <p class="lead">
+            My background combines virtual assistance, content, marketing, outreach,
+            social media, and creative support across different types of online businesses.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2014 – Present</div>
+            <div>
+              <h3>Freelance Virtual Assistant / Marketing Support</h3>
+              <p>Remote support for entrepreneurs, small businesses, authors, ecommerce businesses, and online brands.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-year">Specialty</div>
+            <div>
+              <h3>Amazon KDP & Book Marketing</h3>
+              <p>Book promotion, reviewer outreach, launch assistance, social media promotion, and related author support.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-year">Marketing</div>
+            <div>
+              <h3>Social Media + Lead Generation</h3>
+              <p>Content planning, account management, prospect research, list building, social outreach, and follow-up support.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-row reveal">
+          <a class="btn btn-accent" href="https://www.upwork.com/freelancers/jmabmasap" target="_blank" rel="noopener">View Upwork Profile</a>
+          <a class="btn btn-outline" style="color:white;border-color:white" href="https://v2.onlinejobs.ph/jobseekers/info/2684932" target="_blank" rel="noopener">OnlineJobs.ph</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="about-note">
+            <strong>Professional + Creative + Approachable</strong>
+            <p style="margin-top:8px;">
+              I enjoy combining organization, creativity, and marketing to help clients stay consistent and get things done.
+            </p>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <span class="eyebrow">About Me</span>
+          <h2>I’m Joahna — you can call me JM.</h2>
+          <p class="lead">
+            I’ve been working as a freelancer and Virtual Assistant for over 12 years,
+            helping entrepreneurs, authors, coaches, ecommerce businesses, and growing companies
+            manage the work behind the scenes.
+          </p>
+          <p style="margin-top:18px;">
+            Whether you need someone to manage your social media, find leads, support a marketing campaign,
+            create content, or handle day-to-day online tasks, I bring a practical, organized, and reliable approach.
+          </p>
+
+          <div class="tool-grid">
+            <span class="tool">Canva</span>
+            <span class="tool">CapCut</span>
+            <span class="tool">Filmora</span>
+            <span class="tool">Veed</span>
+            <span class="tool">Facebook</span>
+            <span class="tool">Instagram</span>
+            <span class="tool">TikTok</span>
+            <span class="tool">Pinterest</span>
+            <span class="tool">X / Twitter</span>
+            <span class="tool">LinkedIn</span>
+            <span class="tool">Amazon KDP</span>
+            <span class="tool">Goodreads</span>
+            <span class="tool">Google Workspace</span>
+            <span class="tool">QuickBooks</span>
+            <span class="tool">Wave</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta reveal">
+          <div>
+            <span class="eyebrow" style="color:#ffe1d6;">Let’s Work Together</span>
+            <h2>Have a project in mind?</h2>
+            <p class="lead">
+              If you’re looking for a reliable Virtual Assistant who can help with marketing,
+              social media, lead generation, outreach, content, or online business support,
+              I’d be happy to discuss your project.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="mailto:joahnamarie.jmp@gmail.com">Email Me</a>
+              <a class="btn btn-outline" style="border-color:white;color:white" href="https://www.upwork.com/freelancers/jmabmasap" target="_blank" rel="noopener">Hire Me on Upwork</a>
+            </div>
+          </div>
+
+          <div class="contact-list">
+            <a href="mailto:joahnamarie.jmp@gmail.com">✉ joahnamarie.jmp@gmail.com</a>
+            <a href="https://wa.me/639566777929" target="_blank" rel="noopener">◉ WhatsApp: +63 956 677 7929</a>
+            <a href="https://www.linkedin.com/in/joahna-marie-p-45b21bb6/" target="_blank" rel="noopener">in LinkedIn</a>
+            <a href="https://www.upwork.com/freelancers/jmabmasap" target="_blank" rel="noopener">↗ Upwork</a>
+            <a href="https://v2.onlinejobs.ph/jobseekers/info/2684932" target="_blank" rel="noopener">↗ OnlineJobs.ph</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Client Reviews & Work History</span>
+          <h2>Trusted by clients for reliable, professional online support.</h2>
+          <p class="lead">
+            A selection of verified client feedback from past freelance projects across social media,
+            Amazon KDP, ebook marketing, data entry, and virtual assistance.
+          </p>
+        </div>
+
+        <div class="reviews-summary reveal">
+          <div class="review-score">
+            <strong>5.0</strong>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>Consistent 5-star feedback across the featured client reviews below.</p>
+          </div>
+          <div class="review-history">
+            <h3>A proven history of remote client work</h3>
+            <p>These projects show long-term experience supporting clients with content, book promotion, social media, research, and general virtual assistance — including repeat and extended engagements.</p>
+          </div>
+        </div>
+
+        <div class="review-grid" id="reviewGrid">
+          <article class="review-card reveal">
+            <div class="review-top"><div><h3 class="review-title">Facebook / Website Posts</h3><div class="review-stars">★★★★★ 5.0</div></div><span class="review-date">Job in progress</span></div>
+            <p class="review-quote">“Well done, will hire again.”</p>
+            <div class="review-tags"><span>Repeat-Client Potential</span></div>
+            <div class="review-meta"><span>$60.00</span><span>Fixed price</span></div>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-top"><div><h3 class="review-title">VA for social media and Kindle marketing</h3><div class="review-stars">★★★★★ 5.0</div></div><span class="review-date">May 10, 2021 – Apr 1, 2022</span></div>
+            <p class="review-quote">“She did very good work and beyond. Look forward to working with her again.”</p>
+            <div class="review-tags"><span>Committed to Quality</span><span>Collaborative</span></div>
+            <div class="review-meta"><span>$1,020.00</span><span>Fixed price</span></div>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-top"><div><h3 class="review-title">Book Promotion VA for Amazon KDP and Other Channels</h3><div class="review-stars">★★★★★ 5.0</div></div><span class="review-date">Jan 6, 2020 – Apr 25, 2020</span></div>
+            <p class="review-quote">“Joahna is very good at her job and she's professional. She delivered good results for us.”</p>
+            <div class="review-tags"><span>Professional</span><span>Committed to Quality</span></div>
+            <div class="review-meta"><span>$267.50</span><span>Fixed price</span></div>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-top"><div><h3 class="review-title">Virtual Assistant Needed for Help With Ebook Marketing Online</h3><div class="review-stars">★★★★★ 5.0</div></div><span class="review-date">Jun 17, 2019 – Jul 7, 2019</span></div>
+            <p class="review-quote">“Thanks again Joahna, again, it was a real pleasure working with you.”</p>
+            <div class="review-tags"><span>Collaborative</span></div>
+            <div class="review-meta"><span>$100.00</span><span>Fixed price</span></div>
+          </article>
+
+          <article class="review-card reveal hidden-review extra-review">
+            <div class="review-top"><div><h3 class="review-title">Canada company seeking data entry assistant</h3><div class="review-stars">★★★★★ 5.0</div></div><span class="review-date">Jun 28, 2018 – Jul 23, 2018</span></div>
+            <p class="review-quote">“Very responsive. Awesome freelancer even to Canadian standard. Will certainly hire again!”</p>
+            <div class="review-tags"><span>Clear Communicator</span></div>
+            <div class="review-meta"><span>$149.42 earned</span><span>$5.50/hr</span><span>27 hours</span></div>
+          </article>
+
+          <article class="review-card reveal hidden-review extra-review">
+            <div class="review-top"><div><h3 class="review-title">Help posting to social media</h3><div class="review-stars">★★★★★ 5.0</div></div><span class="review-date">May 13, 2016 – Apr 8, 2018</span></div>
+            <p class="review-quote">“Great work and communication!”</p>
+            <div class="review-tags"><span>Committed to Quality</span><span>Clear Communicator</span></div>
+            <div class="review-meta"><span>$321.00 earned</span><span>$6.00/hr</span><span>53 hours</span></div>
+          </article>
+
+          <article class="review-card reveal hidden-review extra-review">
+            <div class="review-top"><div><h3 class="review-title">Kindle Publishing Virtual Assistant Needed</h3><div class="review-stars">★★★★★ 5.0</div></div><span class="review-date">Aug 9, 2016 – Aug 18, 2017</span></div>
+            <p class="review-quote">“Joahna did so many great work for me since last year. Truly enjoyed working with her. Thanks!”</p>
+            <div class="review-tags"><span>Collaborative</span><span>Committed to Quality</span></div>
+            <div class="review-meta"><span>$308.00</span><span>Fixed price</span></div>
+          </article>
+
+          <article class="review-card reveal hidden-review extra-review">
+            <div class="review-top"><div><h3 class="review-title">Kindle E-Book Promotions</h3><div class="review-stars">★★★★★ 5.0</div></div><span class="review-date">Jul 13, 2015 – Aug 8, 2015</span></div>
+            <p class="review-quote">Project history in Kindle ebook promotion and client support.</p>
+            <div class="review-meta"><span>$160.67 earned</span><span>$4.00/hr</span><span>40 hours</span></div>
+          </article>
+        </div>
+
+        <div class="reviews-actions reveal">
+          <button class="btn btn-outline" id="toggleReviews" type="button" aria-expanded="false">View All Reviews</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
+
+  <footer>
+    <div class="container footer-row">
+      <div>
+        © <span id="year"></span> Joahna Marie Pasamba. All rights reserved.
+      </div>
+      <div class="socials">
+        <a href="https://www.upwork.com/freelancers/jmabmasap" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.linkedin.com/in/joahna-marie-p-45b21bb6/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://v2.onlinejobs.ph/jobseekers/info/2684932" target="_blank" rel="noopener">OnlineJobs.ph</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    const year = document.getElementById("year");
+    const backToTop = document.getElementById("backToTop");
+
+    year.textContent = new Date().getFullYear();
+
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("scrolled", window.scrollY > 25);
+      if(backToTop){
+        backToTop.classList.toggle("show", window.scrollY > 500);
+      }
+    });
+
+    if(backToTop){
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      menuBtn.textContent = navLinks.classList.contains("open") ? "✕" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+
+    const toggleReviews = document.getElementById("toggleReviews");
+    const extraReviews = document.querySelectorAll(".extra-review");
+
+    if(toggleReviews){
+      toggleReviews.addEventListener("click", () => {
+        const isExpanded = toggleReviews.getAttribute("aria-expanded") === "true";
+        extraReviews.forEach(card => card.classList.toggle("hidden-review", isExpanded));
+        toggleReviews.setAttribute("aria-expanded", String(!isExpanded));
+        toggleReviews.textContent = isExpanded ? "View All Reviews" : "Show Fewer Reviews";
+
+        if(!isExpanded){
+          extraReviews.forEach(card => card.classList.add("show"));
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
